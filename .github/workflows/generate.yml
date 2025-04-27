@@ -25,11 +25,6 @@ jobs:
       - name: Run generate script and commit changes
         run: |
           ./generate.sh -v
-          # Skip if no changes
-          if [[ -z "$(git status --porcelain)" ]]; then
-            echo "No changes to commit."
-            exit 0
-          fi
           # Commit and push changes
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
