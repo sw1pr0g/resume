@@ -22,18 +22,23 @@ jobs:
           curl -L https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic@0.15.0/tectonic-0.15.0-x86_64-unknown-linux-gnu.tar.gz | tar xz -C /usr/local/bin
           chmod +x /usr/local/bin/tectonic
 
-      - name: Run generate script
-        run: 
-          ./generate.sh
-          # Skip if no changes.
-          if [[ ! "$(git status --porcelain)" ]]; then
-            echo "No changes."
+      - name: Run generate script and commit changes
+        run: |
+          ./generate.sh -v
+          # Skip if no changes
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "No changes to commit."
             exit 0
           fi
-
-          # Push code.
-          git config --global user.name  "github-actions[bot]"
+          # Commit and push changes
+          git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
+          git add resume.pdf
           git commit -m "Re-generate resume"
           git push
+
+      - name: Upload resume artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume
+          path: resume.pdf
