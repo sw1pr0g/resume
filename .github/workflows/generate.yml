@@ -23,10 +23,17 @@ jobs:
           chmod +x /usr/local/bin/tectonic
 
       - name: Run generate script
-        run: ./generate.sh -v
+        run: 
+          ./generate.sh
+          # Skip if no changes.
+          if [[ ! "$(git status --porcelain)" ]]; then
+            echo "No changes."
+            exit 0
+          fi
 
-      - name: Upload resume artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: resume
-          path: resume.pdf
+          # Push code.
+          git config --global user.name  "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Re-generate resume"
+          git push
