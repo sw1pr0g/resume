@@ -1,0 +1,140 @@
+\documentclass[fontsize=11pt]{article}
+    \usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[protrusion=true]{microtype}
+\usepackage[svgnames]{xcolor}  % Colours by their 'svgnames'
+\usepackage[margin=0.75in]{geometry}
+  \textheight=525pt
+\usepackage{url}
+\usepackage{lmodern} % Allow arbitrary font sizes
+\usepackage{textcomp}
+
+%% Define a new 'modern' style for the url package that will use a smaller font.
+\makeatletter
+\def\url@modernstyle{
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{}}}
+\makeatother
+\urlstyle{modern} %% And use the newly defined style.
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+\renewcommand{\familydefault}{\sfdefault}
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{                 % Change font of \section command
+  \usefont{OT1}{phv}{b}{n}%   % bch-b-n: CharterBT-Bold font
+  \sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}      % Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}   % Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+    \Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+    \par \normalsize \normalfont}
+
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+    \large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+    \par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+    \noindent\hangindent=2em\hangafter=0 % Indentation
+    \parbox{\spacebox}{                  % Box to align text
+    \textit{#1}}                      % Entry name (birth, address, etc.)
+    \hspace{1.5em} #2 \par}              % Entry value
+
+\newcommand{\SkillsEntry}[2]{                % Same as \PersonalEntry
+    \noindent\hangindent=2em\hangafter=0 % Indentation
+    \parbox{\spacebox}{                  % Box to align text
+    \textit{#1}}                    % Entry name (birth, address, etc.)
+    \hspace{1.5em} #2 \par}              % Entry value
+
+\newcommand{\AwardsEntry}[2]{                % Same as \PersonalEntry
+    \noindent\hangindent=2em\hangafter=0 % Indentation
+    \parbox{\spacebox}{                  % Box to align text
+    \textit{#1}}                    % Entry name (birth, address, etc.)
+    \hspace{1.5em} #2 \par}              % Entry value
+
+\newcommand{\EducationEntry}[4]{
+    \noindent \textbf{#1} \hfill      % Study
+    \colorbox{Black}{
+      \parbox{8.5em}{
+      \hfill\color{White}#2}} \par  % Duration
+    \noindent \textit{#3} \par        % School
+    \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+    \normalsize \par}
+
+\newcommand{\WorkEntry}[4]{       % Same as \EducationEntry
+    \noindent \textbf{#1} \hfill      % Jobname
+    \colorbox{Black}{%
+      \parbox{9em}{%
+      \hfill\color{White}#2}} \par   % Duration
+        \noindent \textit{#3} \par        % Company
+    \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+    \normalsize \par}
+
+\newcommand{\ProjectEntry}[4]{         % Similar to \EducationEntry
+    \noindent \textbf{#1} \noindent \textit{#3} \hfill {#2} \par
+    \noindent \small #4 % Description
+    \normalsize \par}
+
+\newcommand{\AwardEntry}[4]{         % Similar to \EducationEntry
+    \noindent \textbf{#1} \noindent \textit{#3} \hfill {#2} \par
+    \noindent \small #4 % Description
+    \normalsize \par}
+    \begin{document}
+    
+\MyName{Alex Poryadin}
+\bigskip
+{\small \hfill sw1pr0g.dev@gmail.com | sw1pr0g.github.io}
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+\EducationEntry
+{Associate Degree Computer Science}
+{Sep 2019 - Jun 2023}
+{Zavolzhye Automotive Technical College, Zavolzhye, Nizhny Novgorod Oblast, Russia}
+\sepspace
+\EducationEntry
+{Engineer’s Degree Computer Networks and Technologies}
+{Sep 2023 - Mar 2027}
+{Nizhny Novgorod State Technical University, Nizhny Novgorod, Russia}
+%%% Work experience
+%%% ------------------------------------------------------------
+
+\NewPart{Experience}{}
+
+\WorkEntry
+{Software Engineer}
+{Jul 2023 - Present}
+{Telemetry Balkan doo, Remote}
+{\begin{itemize} \itemsep -1pt
+	\item Established stable operation with physical charging station hardware by implementing support for the Web Serial API.
+	\item Contributed to the development of a multifunctional React web application for managing various types of robots, featuring 3D visualization and interactive configuration.
+	\item Optimized and refactored the logic of a chatbot based on Amazon Lex and integrated it with Amazon Bedrock.
+	\end{itemize}}
+%%% Skills
+%%% ------------------------------------------------------------
+\NewPart{Skills}{}
+\SkillsEntry{Languages}{C, Go, JavaScript, TypeScript, Python, SQL, HTML, CSS}
+\SkillsEntry{Databases}{PostgreSQL, SQLite, MySQL}
+\SkillsEntry{Cloud/Infra}{AWS, GitHub Actions, GitLab CI}
+%%% Projects
+%%% ------------------------------------------------------------
+\NewPart{Projects}{}
+
+\ProjectEntry{EasyVPN}{https://github.com/F1st3K/EasyVPN}
+{C\#, .NET, TypeScript, React, Go, Python}
+{Simple VPN + Backend + Frontend application on a single server.}
+
+\ 
+\end{document}
