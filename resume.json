@@ -1,104 +1,114 @@
 {
-    "selectedTemplate": 9,
-    "basics": {
-      "email": "sw1pr0g.dev@gmail.com",
-      "name": "Alex Poryadin",
-      "website": "sw1pr0g.github.io",
-      "github": "sw1pr0g",
-      "linkedin": "linkedin.com/in/alex-poryadin-5315b032",
-      "location": {
-        "city": "Nizhny Novgorod",
-        "region": "Nizhny Novgorod Oblast",
-        "countryCode": "RU"
-      }
+  "selectedTemplate": 9,
+  "basics": {
+    "email": "sw1pr0g.dev@gmail.com",
+    "name": "Alex Poryadin",
+    "website": "sw1pr0g.github.io",
+    "github": "sw1pr0g",
+    "linkedin": "linkedin.com/in/alex-poryadin-5315b032",
+    "location": {
+      "city": "Nizhny Novgorod",
+      "region": "Nizhny Novgorod Oblast",
+      "countryCode": "RU"
+    }
+  },
+  "education": [
+    {
+      "location": "Zavolzhye, Nizhny Novgorod Oblast, Russia",
+      "studyType": "Associate of Science - AS",
+      "area": "Computer Programming",
+      "startDate": "Sep 2019",
+      "endDate": "Jun 2023",
+      "institution": "Zavolzhye Automotive Technical College"
     },
-    "education": [
-      {
-        "institution": "Zavolzhye Automotive Technical College",
-        "location": "Zavolzhye, Nizhny Novgorod Oblast, Russia",
-        "studyType": "Associate Degree",
-        "area": "Computer Science",
-        "startDate": "Sep 2019",
-        "endDate": "Jun 2023"
-      },
-      {
-        "institution": "Nizhny Novgorod State Technical University",
-        "location": "Nizhny Novgorod, Russia",
-        "studyType": "Engineer’s Degree",
-        "area": "Computer Networks and Technologies",
-        "startDate": "Sep 2023",
-        "endDate": "Mar 2027"
-      }
-    ],
-    "work": [
-      {
-        "highlights": [
-          "Established stable operation with physical charging station hardware by implementing support for the Web Serial API.",
-          "Contributed to the development of a multifunctional React web application for managing various types of robots, featuring 3D visualization and interactive configuration.",
-          "Optimized and refactored the logic of a chatbot based on Amazon Lex and integrated it with Amazon Bedrock."
-        ],
-        "company": "Telemetry Balkan doo",
-        "position": "Software Engineer",
-        "location": "Remote",
-        "startDate": "Jul 2023",
-        "endDate": "Present"
-      }
-    ],
-    "skills": [
-      {
-        "keywords": [
-          "C",
-          "Go",
-          "JavaScript",
-          "TypeScript",
-          "Python",
-          "SQL",
-          "HTML",
-          "CSS"
-        ],
-        "name": "Languages"
-      },
-      {
-        "keywords": [
-          "PostgreSQL",
-          "SQLite",
-          "MySQL"
-        ],
-        "name": "Databases"
-      },
-      {
-        "keywords": [
-          "AWS",
-          "GitHub Actions",
-          "GitLab CI"
-        ],
-        "name": "Cloud/Infra"
-      }
-    ],
-    "projects": [
-      {
-        "description": "Simple VPN + Backend + Frontend application on a single server.",
-        "keywords": [
-          "C#",
-          ".NET",
-          "TypeScript",
-          "React",
-          "Go",
-          "Python"
-        ],
-        "name": "EasyVPN",
-        "website": "github.com/F1st3k/EasyVPN",
-        "url": "https://github.com/F1st3K/EasyVPN"
-      }
-    ],
-    "awards": [],
-    "sections": [
-      "templates",
-      "profile",
-      "education",
-      "work",
-      "skills",
-      "projects",
-      "awards"
-    ]
-  }
+    {
+      "institution": " Nizhny Novgorod State Technical University n.a. R.E. Alekseev (NNSTU)",
+      "location": "Nizhny Novgorod, Russia",
+      "studyType": "Bachelor of Science - BS",
+      "area": "Computer Science",
+      "startDate": "Sep 2023",
+      "endDate": "Mar 2027"
+    }
+  ],
+  "work": [
+    {
+      "highlights": [
+        "Established stable operation with physical charging station hardware by implementing support for the Web Serial API.",
+        "Contributed to the development of a multifunctional React web application for managing various types of robots, featuring 3D visualization and interactive configuration.",
+        "Optimized and refactored the logic of a chatbot based on Amazon Lex and integrated it with Amazon Bedrock."
+      ],
+      "company": "Telemetry Balkan doo",
+      "position": "Software Engineer",
+      "location": "Remote",
+      "startDate": "Jul 2023",
+      "endDate": "May 2025"
+    },
+    {
+      "highlights": [
+        "Developed an AI agent based on GigaChat for the legal department, enabling document processing, analysis, predictive insights, and accelerated information retrieval."
+      ],
+      "company": "Sberbank",
+      "position": "Backend Developer",
+      "location": "Nizhny Novgorod, Russia",
+      "startDate": "May 2025",
+      "endDate": "Present"
+    }
+  ],
+  "skills": [
+    {
+      "keywords": [
+        "C",
+        "Go",
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "SQL",
+        "HTML",
+        "CSS"
+      ],
+      "name": "Languages"
+    },
+    {
+      "keywords": [
+        "PostgreSQL",
+        "SQLite",
+        "MySQL"
+      ],
+      "name": "Databases"
+    },
+    {
+      "keywords": [
+        "AWS",
+        "GitHub Actions",
+        "GitLab CI"
+      ],
+      "name": "Cloud/Infra"
+    }
+  ],
+  "projects": [
+    {
+      "description": "Simple VPN + Backend + Frontend application on a single server.",
+      "keywords": [
+        "C#",
+        ".NET",
+        "TypeScript",
+        "React",
+        "Go",
+        "Python"
+      ],
+      "name": "EasyVPN",
+      "website": "github.com/F1st3k/EasyVPN",
+      "url": "https://github.com/F1st3K/EasyVPN"
+    }
+  ],
+  "awards": [],
+  "sections": [
+    "templates",
+    "profile",
+    "education",
+    "work",
+    "skills",
+    "projects",
+    "awards"
+  ]
+}
