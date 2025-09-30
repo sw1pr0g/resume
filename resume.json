@@ -45,10 +45,11 @@
     },
     {
       "highlights": [
-        "Developed an AI agent based on GigaChat for the legal department, enabling document processing, analysis, predictive insights, and accelerated information retrieval."
+        "Developed an AI agent based on GigaChat for the legal department, enabling document processing, analysis, predictive insights, and accelerated information retrieval.",
+        "Implemented a multi-agent system for the legal department, leveraging local document data to improve collaboration, automate case analysis, and support decision-making."
       ],
       "company": "Sberbank",
-      "position": "Backend Developer",
+      "position": "AI Engineer",
       "location": "Nizhny Novgorod, Russia",
       "startDate": "May 2025",
       "endDate": "Present"
